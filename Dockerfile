@@ -41,6 +41,7 @@ RUN conda install -y -c conda-forge mamba python-devtools singularity && \
 RUN pip3 install cython
 
 COPY setup.py /opt/work/snakemake/setup.py 
+COPY aws_batch.py /opt/work/snakemake/snakemake/executors/aws_batch.py
 WORKDIR /opt/work/snakemake
 RUN python3.8 setup.py install && pip3.8 install .
 
