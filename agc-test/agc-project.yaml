@@ -5,9 +5,9 @@ workflows:
     type:
       language: snakemake
       version: 1.0
-    sourceURL: testwf/simple
+    sourceURL: workflow/
 contexts:
-  withSingularity:
+  singularity:
     instanceTypes:
       - "c5.large"
       - "c5.xlarge"
