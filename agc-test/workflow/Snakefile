@@ -1,0 +1,12 @@
+rule all:
+	input:
+		"output/outwhale"
+		
+rule hello:
+	output:
+		"output/outwhale",
+	container: 'docker://docker/whalesay'
+	shell:
+		"""
+		cowsay whale > output/outwhale
+		"""
